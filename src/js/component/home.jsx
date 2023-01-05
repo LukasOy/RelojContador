@@ -4,23 +4,35 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+const Home = ({segundos}) => {
+	let string = segundos.toString()
+	let unidad = string[string.length -1]
+	let decena = string[string.length -2]
+	let centena = string[string.length -3]
+	let dmil = string[string.length -4]
+
+	
+	function stopCounter() {
+		// aquí debes poner el código para detener el contador
+	  }
 	return (
+		
+		<div className="Reloj1">
+			<img src="https://pbs.twimg.com/media/CDfNmCAUUAE_4fO.jpg" alt="estas muerto.com"></img>
 		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<button className="btn btn-danger" >¿Cuanto Falta? </button>
+			<button className="btn btn-danger" > {dmil==undefined? "0":centena} </button>
+			<button className="btn btn-danger" > {centena==undefined? "0":centena} </button>
+			<button className="btn btn-danger" > {decena==undefined? "0":decena} </button>
+			<button className="btn btn-danger" > {unidad} </button>
+			<button className="btn btn-danger" onClick={stopCounter}>ESTAP</button>
+		</div>
 		</div>
 	);
 };
 
+
 export default Home;
+
+ 
+ 

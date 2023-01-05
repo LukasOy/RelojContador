@@ -10,3 +10,10 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.Reloj1{
+    display:inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    background-color: red;
+    padding:10px;
+}
